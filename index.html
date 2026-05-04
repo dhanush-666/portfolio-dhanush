@@ -20,17 +20,11 @@
 <meta name="theme-color" content="#00ffe5"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<<<<<<< HEAD
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<!-- EmailJS SDK -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-=======
 <!-- Non-blocking font load — prevents render blocking on mobile -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap"/></noscript>
 <!-- EmailJS deferred — never blocks render -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
->>>>>>> c267416 (uploaded new version of portfolio and resume)
 
 <style>
 /* Skip to content — keyboard accessibility */
@@ -94,8 +88,6 @@
 }
 
 /* ============================================================
-<<<<<<< HEAD
-=======
    LIGHT MODE — applied via [data-theme="light"] on <html>
    ALL neon accents are replaced with deep readable equivalents:
      --cyan   → deep teal   #0369a1
@@ -427,7 +419,6 @@
 }
 
 /* ============================================================
->>>>>>> c267416 (uploaded new version of portfolio and resume)
    BASE
    ============================================================ */
 html {
@@ -630,11 +621,7 @@ ul  { list-style: none; }
 .nav__links a {
   font-family: var(--font-mono);
   font-size: 12px;
-<<<<<<< HEAD
-  color: var(--muted);
-=======
   color: rgba(200,200,255,0.75);
->>>>>>> c267416 (uploaded new version of portfolio and resume)
   letter-spacing: .12em;
   position: relative;
   transition: color .2s;
@@ -733,15 +720,9 @@ ul  { list-style: none; }
   font-family: var(--font-mono);
   font-size: 14px;
   letter-spacing: .14em;
-<<<<<<< HEAD
-  color: var(--muted);
-  padding: .75rem 0;
-  border-bottom: 1px solid rgba(255,255,255,.05);
-=======
   color: rgba(220,220,255,0.85);
   padding: .75rem 0;
   border-bottom: 1px solid rgba(255,255,255,.07);
->>>>>>> c267416 (uploaded new version of portfolio and resume)
   transition: color .2s, padding-left .2s;
 }
 .mob-nav a:hover { color: var(--cyan); padding-left: .5rem; }
@@ -910,8 +891,6 @@ ul  { list-style: none; }
   .bg-scanlines { animation: none !important; }
 }
 
-<<<<<<< HEAD
-=======
 /* ── MOBILE PERFORMANCE: disable GPU-heavy effects on small screens ──
    Orbs with filter:blur(120px) + orbFloat animation = huge paint cost on mobile
    Scanlines animation = continuous repaints = kills TBT
@@ -947,7 +926,6 @@ ul  { list-style: none; }
   contain-intrinsic-size: 0 600px;
 }
 
->>>>>>> c267416 (uploaded new version of portfolio and resume)
 /* ============================================================
    TICKER BAND
    ============================================================ */
@@ -987,11 +965,7 @@ ul  { list-style: none; }
   font-size: 12px;
   letter-spacing: .1em;
   white-space: nowrap;
-<<<<<<< HEAD
-  color: var(--muted);
-=======
   color: rgba(200,200,255,0.75);
->>>>>>> c267416 (uploaded new version of portfolio and resume)
 }
 
 /* Marquee band (purple) */
@@ -1017,11 +991,7 @@ ul  { list-style: none; }
   gap: .5rem;
   font-family: var(--font-mono);
   font-size: 12px;
-<<<<<<< HEAD
-  color: rgba(168,85,247,.7);
-=======
   color: rgba(168,85,247,0.9);
->>>>>>> c267416 (uploaded new version of portfolio and resume)
   white-space: nowrap;
   letter-spacing: .08em;
 }
@@ -1049,13 +1019,8 @@ ul  { list-style: none; }
   filter: blur(120px);
   opacity: .2;
   animation: orbFloat 10s ease-in-out infinite;
-<<<<<<< HEAD
-  will-change: transform;   /* GPU layer hint */
-  contain: strict;          /* isolate paint/layout */
-=======
   will-change: transform;
   contain: strict;
->>>>>>> c267416 (uploaded new version of portfolio and resume)
 }
 .orb--1 { width: clamp(300px,50vw,600px); height: clamp(300px,50vw,600px); background: var(--purple); top: -150px; right: -100px; animation-delay: 0s; }
 .orb--2 { width: clamp(200px,35vw,400px); height: clamp(200px,35vw,400px); background: var(--cyan);   bottom: -100px; left: -50px; animation-delay: 3s; }
@@ -1114,12 +1079,9 @@ ul  { list-style: none; }
   letter-spacing: .05em;
   margin-bottom: 1rem;
   white-space: nowrap;
-<<<<<<< HEAD
-=======
   overflow: hidden;
   /* Shrink on very small screens to prevent cutoff */
   max-width: 100%;
->>>>>>> c267416 (uploaded new version of portfolio and resume)
 }
 
 .hero__name .w1 { display: inline; opacity: 0; animation: wordIn .9s cubic-bezier(.16,1,.3,1) .2s both; }
@@ -1138,11 +1100,7 @@ ul  { list-style: none; }
 
 .hero__desc {
   font-size: clamp(.85rem, 1.5vw, 1rem);
-<<<<<<< HEAD
-  color: var(--muted);
-=======
   color: rgba(200,200,255,0.78);
->>>>>>> c267416 (uploaded new version of portfolio and resume)
   max-width: 500px;
   line-height: 1.75;
   margin-bottom: 2.5rem;
@@ -1262,11 +1220,7 @@ ul  { list-style: none; }
 .about__card p {
   font-size: 15px;
   line-height: 1.8;
-<<<<<<< HEAD
-  color: var(--muted);
-=======
   color: rgba(200,200,255,0.78);
->>>>>>> c267416 (uploaded new version of portfolio and resume)
   margin-bottom: 1rem;
 }
 
@@ -1378,10 +1332,7 @@ ul  { list-style: none; }
   padding: 2rem;
   position: relative;
   overflow: hidden;
-<<<<<<< HEAD
-=======
   contain: layout paint;
->>>>>>> c267416 (uploaded new version of portfolio and resume)
   transition: transform .3s, border-color .3s;
 }
 .proj-card:hover { transform: translate(-4px,-4px); }
@@ -1408,13 +1359,10 @@ ul  { list-style: none; }
   top: .5rem; right: 1.5rem;
   opacity: .04;
   line-height: 1;
-<<<<<<< HEAD
-=======
   pointer-events: none;
   user-select: none;
   max-width: 100%;
   overflow: hidden;
->>>>>>> c267416 (uploaded new version of portfolio and resume)
 }
 
 .proj-card__badge {
@@ -1827,8 +1775,6 @@ ul  { list-style: none; }
    ============================================================ */
 
 /* ── SMALL PHONES: 320px – 479px (default / base styles above already cover this) ── */
-<<<<<<< HEAD
-=======
 /* Extra small phones — prevent hero name overflow */
 @media (max-width: 400px) {
   .hero__name {
@@ -1862,7 +1808,6 @@ ul  { list-style: none; }
     padding: 1.25rem;
   }
 }
->>>>>>> c267416 (uploaded new version of portfolio and resume)
 
 /* ── LARGE PHONES: 480px+ ── */
 @media (min-width: 480px) {
@@ -1934,14 +1879,11 @@ ul  { list-style: none; }
     padding-right: 2rem;
   }
   .edu-item__yr { width: auto; }
-<<<<<<< HEAD
-=======
 
   /* Light mode edu border */
   [data-theme="light"] .edu-item__left {
     border-right-color: rgba(3,105,161,.1);
   }
->>>>>>> c267416 (uploaded new version of portfolio and resume)
 }
 
 /* ── LAPTOPS / iPad Pro: 1024px+ ── */
@@ -2029,12 +1971,9 @@ ul  { list-style: none; }
     <li><a href="#contact">contact</a></li>
   </ul>
   <a href="#contact" class="nav__hire" aria-label="Hire Dhanush — go to contact section">[ hire_me ]</a>
-<<<<<<< HEAD
-=======
   <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">
     <span class="theme-toggle__knob" id="themeKnob">🌙</span>
   </button>
->>>>>>> c267416 (uploaded new version of portfolio and resume)
   <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mob-nav">
     <span></span><span></span><span></span>
   </button>
@@ -2062,10 +2001,6 @@ ul  { list-style: none; }
     <div class="orb orb--3"></div>
   </div>
   <div class="hero__inner">
-<<<<<<< HEAD
-    <div class="hero__status">
-      <span class="status-dot"></span>open_to_work :: erode, tamil_nadu
-=======
     <div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:2rem;opacity:0;animation:fadeUp .8s ease .3s both">
       <div class="hero__status" style="margin-bottom:0">
         <span class="status-dot"></span>open_to_work :: erode, tamil_nadu
@@ -2073,26 +2008,11 @@ ul  { list-style: none; }
       <div style="display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--lime);padding:.4rem 1rem;border:1px solid rgba(200,241,53,.3);background:rgba(200,241,53,.06);clip-path:polygon(8px 0%,100% 0%,100% calc(100% - 8px),calc(100% - 8px) 100%,0% 100%,0% 8px)">
         <span style="width:6px;height:6px;background:var(--lime);border-radius:50%;box-shadow:0 0 8px var(--lime);display:inline-block;flex-shrink:0"></span>immediate_joiner
       </div>
->>>>>>> c267416 (uploaded new version of portfolio and resume)
     </div>
     <p class="hero__prompt">// whoami</p>
     <h1 class="hero__name">
       <span class="w1 g-cyan">DHANUSH</span><span class="w2 g-purple">_S</span>
     </h1>
-<<<<<<< HEAD
-    <p class="hero__role">DevOps Engineer &nbsp;|&nbsp; <span>Cloud Infra</span> &nbsp;|&nbsp; CI/CD &nbsp;|&nbsp; Containers</p>
-    <p class="hero__desc">Fresher DevOps engineer passionate about automating deployments, orchestrating containers, and building cloud infrastructure that scales. Ready to ship from day one.</p>
-    <div class="hero__btns">
-      <a href="#projects" class="btn btn--primary" aria-label="View Dhanush's projects">[ view_work ]</a>
-      <a href="Dhanush_S_Resume.pdf" download class="btn btn--resume" aria-label="Download Dhanush's resume PDF">⬇ download_resume</a>
-      <a href="#contact" class="btn btn--outline" aria-label="Go to contact section">[ contact_me ]</a>
-    </div>
-    <div class="hero__stats">
-      <div class="stat"><span class="stat__num c-cyan">2</span><span class="stat__lbl">projects_shipped</span></div>
-      <div class="stat"><span class="stat__num c-purple">MCA</span><span class="stat__lbl">qualification</span></div>
-      <div class="stat"><span class="stat__num c-pink">75%</span><span class="stat__lbl">academic_score</span></div>
-      <div class="stat"><span class="stat__num c-amber">15+</span><span class="stat__lbl">tools_mastered</span></div>
-=======
     <p class="hero__role">DevOps Engineer &nbsp;|&nbsp; <span>Cloud Engineer</span> &nbsp;|&nbsp; CI/CD &nbsp;|&nbsp; AWS</p>
     <p class="hero__desc">MCA fresher from Erode with hands-on experience in Jenkins, Docker, AWS and Linux. I build automated pipelines, containerise apps, and deploy cloud infrastructure. Completed a 6-month DevOps with AWS course. Ready from day one.</p>
     <div class="hero__btns">
@@ -2105,7 +2025,6 @@ ul  { list-style: none; }
       <div class="stat"><span class="stat__num c-purple">MCA</span><span class="stat__lbl">qualification</span></div>
       <div class="stat"><span class="stat__num c-pink">75%</span><span class="stat__lbl">academic_score</span></div>
       <div class="stat"><span class="stat__num c-amber">8+</span><span class="stat__lbl">tools_used</span></div>
->>>>>>> c267416 (uploaded new version of portfolio and resume)
     </div>
   </div>
 </section>
@@ -2116,29 +2035,6 @@ ul  { list-style: none; }
     <div class="ticker__item"><span style="color:var(--cyan)">▶</span> Docker</div>
     <div class="ticker__item"><span style="color:var(--purple)">▶</span> Jenkins</div>
     <div class="ticker__item"><span style="color:var(--pink)">▶</span> AWS</div>
-<<<<<<< HEAD
-    <div class="ticker__item"><span style="color:var(--amber)">▶</span> GitHub</div>
-    <div class="ticker__item"><span style="color:var(--lime)">▶</span> Linux</div>
-    <div class="ticker__item"><span style="color:var(--blue)">▶</span> Kubernetes</div>
-    <div class="ticker__item"><span style="color:var(--cyan)">▶</span> Terraform</div>
-    <div class="ticker__item"><span style="color:var(--purple)">▶</span> Ansible</div>
-    <div class="ticker__item"><span style="color:var(--pink)">▶</span> Nginx</div>
-    <div class="ticker__item"><span style="color:var(--amber)">▶</span> Shell Scripting</div>
-    <div class="ticker__item"><span style="color:var(--lime)">▶</span> CI/CD Pipelines</div>
-    <div class="ticker__item"><span style="color:var(--blue)">▶</span> MySQL</div>
-    <div class="ticker__item"><span style="color:var(--cyan)">▶</span> Docker</div>
-    <div class="ticker__item"><span style="color:var(--purple)">▶</span> Jenkins</div>
-    <div class="ticker__item"><span style="color:var(--pink)">▶</span> AWS</div>
-    <div class="ticker__item"><span style="color:var(--amber)">▶</span> GitHub</div>
-    <div class="ticker__item"><span style="color:var(--lime)">▶</span> Linux</div>
-    <div class="ticker__item"><span style="color:var(--blue)">▶</span> Kubernetes</div>
-    <div class="ticker__item"><span style="color:var(--cyan)">▶</span> Terraform</div>
-    <div class="ticker__item"><span style="color:var(--purple)">▶</span> Ansible</div>
-    <div class="ticker__item"><span style="color:var(--pink)">▶</span> Nginx</div>
-    <div class="ticker__item"><span style="color:var(--amber)">▶</span> Shell Scripting</div>
-    <div class="ticker__item"><span style="color:var(--lime)">▶</span> CI/CD Pipelines</div>
-    <div class="ticker__item"><span style="color:var(--blue)">▶</span> MySQL</div>
-=======
     <div class="ticker__item"><span style="color:var(--amber)">▶</span> Git / GitHub</div>
     <div class="ticker__item"><span style="color:var(--lime)">▶</span> Linux</div>
     <div class="ticker__item"><span style="color:var(--cyan)">▶</span> Bash Scripting</div>
@@ -2166,7 +2062,6 @@ ul  { list-style: none; }
     <div class="ticker__item"><span style="color:var(--cyan)">▶</span> AWS EC2</div>
     <div class="ticker__item"><span style="color:var(--purple)">▶</span> AWS S3</div>
     <div class="ticker__item"><span style="color:var(--pink)">▶</span> IAM / VPC</div>
->>>>>>> c267416 (uploaded new version of portfolio and resume)
   </div>
 </div>
 
@@ -2181,16 +2076,10 @@ ul  { list-style: none; }
     </div>
     <div class="about__grid rev-blur">
       <div class="about__card">
-<<<<<<< HEAD
-        <p>I'm <strong style="color:var(--cyan)">Dhanush S</strong> — a fresher DevOps Engineer with an MCA from Kongu Arts and Science College, Erode. Passionate about automating deployments, managing cloud infrastructure, and building systems that just <em>work</em>.</p>
-        <p>Skilled in Git, Jenkins, Docker, and AWS with a sharp focus on CI/CD pipelines, automation, and system reliability. Eager to contribute to scalable infrastructure solutions from day one.</p>
-        <p style="color:var(--lime);font-family:var(--font-mono);font-size:13px;margin-top:1.5rem">&gt; status: ready_to_deploy 🚀</p>
-=======
         <p>I'm <strong style="color:var(--cyan)">Dhanush S</strong>, a Computer Applications postgraduate from Erode, Tamil Nadu, with a passion for DevOps and Cloud Engineering. I completed a 6-month DevOps with AWS course where I got hands-on with building CI/CD pipelines, containerising applications with Docker, and provisioning cloud infrastructure on AWS.</p>
         <p>I believe in learning by doing — every tool on this page, whether it's Linux, Bash, Jenkins, Docker, Git, AWS, Nginx, or MySQL, has been used in a real project. Across my projects I've worked on automated deployment pipelines, cloud infrastructure setups, and practical web applications built for real users.</p>
         <p>I'm currently looking for my first professional role as a <strong style="color:var(--cyan)">DevOps</strong> or <strong style="color:var(--cyan)">Cloud Engineer</strong>. I may be a fresher, but I come ready to contribute, learn fast, and grow alongside a team that values good infrastructure and clean automation.</p>
         <p style="color:var(--lime);font-family:var(--font-mono);font-size:13px;margin-top:1.5rem">&gt; status: ready_to_contribute 🚀</p>
->>>>>>> c267416 (uploaded new version of portfolio and resume)
       </div>
       <div class="about__info">
         <div class="info-row" style="border-color:var(--cyan)">
@@ -2213,24 +2102,6 @@ ul  { list-style: none; }
           <span class="info-row__label">languages_spoken</span>
           <span class="info-row__val">Tamil · English · Telugu</span>
         </div>
-<<<<<<< HEAD
-        <div class="info-row" style="border-color:var(--blue)">
-          <span class="info-row__label">education</span>
-          <div class="info-row__val">
-            <div class="edu-entry">
-              <div class="edu__deg">MCA — Kongu Arts &amp; Science College</div>
-              <div class="edu__school">Master of Computer Applications</div>
-              <div class="edu__yr">2022 – 2024 · 75%</div>
-            </div>
-            <div class="edu-entry">
-              <div class="edu__deg">BCA — Kongu Arts &amp; Science College</div>
-              <div class="edu__school">Bachelor of Computer Applications</div>
-              <div class="edu__yr">2019 – 2022 · 70.4%</div>
-            </div>
-          </div>
-        </div>
-=======
->>>>>>> c267416 (uploaded new version of portfolio and resume)
       </div>
     </div>
   </div>
@@ -2253,18 +2124,6 @@ ul  { list-style: none; }
         <div class="sk-card__idx">[ 01 ]</div>
         <span class="sk-card__ico">☁️</span>
         <div class="sk-card__name">CLOUD // AWS</div>
-<<<<<<< HEAD
-        <div class="sk-card__desc">Building and managing cloud infrastructure on AWS. Scalable, available, cost-efficient.</div>
-        <div class="sk-tags">
-          <span class="sk-tag sk-tag--cyan">EC2</span>
-          <span class="sk-tag sk-tag--cyan">S3</span>
-          <span class="sk-tag sk-tag--cyan">Lambda</span>
-          <span class="sk-tag sk-tag--cyan">IAM</span>
-          <span class="sk-tag sk-tag--cyan">VPC</span>
-          <span class="sk-tag sk-tag--cyan">EBS</span>
-          <span class="sk-tag sk-tag--cyan">SNS</span>
-          <span class="sk-tag sk-tag--cyan">CloudWatch</span>
-=======
         <div class="sk-card__desc">Hands-on with core AWS services — provisioning servers, managing storage, securing access, monitoring uptime.</div>
         <div class="sk-tags">
           <span class="sk-tag sk-tag--cyan">EC2</span>
@@ -2273,27 +2132,18 @@ ul  { list-style: none; }
           <span class="sk-tag sk-tag--cyan">VPC</span>
           <span class="sk-tag sk-tag--cyan">CloudWatch</span>
           <span class="sk-tag sk-tag--cyan">Security Groups</span>
->>>>>>> c267416 (uploaded new version of portfolio and resume)
         </div>
       </div>
       <div class="sk-card sk-card--2">
         <div class="sk-card__idx">[ 02 ]</div>
         <span class="sk-card__ico">⚡</span>
         <div class="sk-card__name">CI // CD PIPELINES</div>
-<<<<<<< HEAD
-        <div class="sk-card__desc">Automating build, test, deploy cycles. Zero-downtime. Fast delivery.</div>
-        <div class="sk-tags">
-          <span class="sk-tag sk-tag--purple">Jenkins</span>
-          <span class="sk-tag sk-tag--purple">GitHub Actions</span>
-          <span class="sk-tag sk-tag--purple">Git</span>
-=======
         <div class="sk-card__desc">Building automated pipelines from GitHub commit to live deployment. No manual steps, no surprises.</div>
         <div class="sk-tags">
           <span class="sk-tag sk-tag--purple">Jenkins</span>
           <span class="sk-tag sk-tag--purple">Git</span>
           <span class="sk-tag sk-tag--purple">GitHub</span>
           <span class="sk-tag sk-tag--purple">Webhooks</span>
->>>>>>> c267416 (uploaded new version of portfolio and resume)
           <span class="sk-tag sk-tag--purple">Maven</span>
         </div>
       </div>
@@ -2301,23 +2151,6 @@ ul  { list-style: none; }
         <div class="sk-card__idx">[ 03 ]</div>
         <span class="sk-card__ico">🐳</span>
         <div class="sk-card__name">CONTAINERS</div>
-<<<<<<< HEAD
-        <div class="sk-card__desc">Containerising apps for consistency across every environment. Dev = Prod.</div>
-        <div class="sk-tags">
-          <span class="sk-tag sk-tag--pink">Docker</span>
-          <span class="sk-tag sk-tag--pink">Nginx</span>
-        </div>
-        <div style="margin-top:.8rem;font-family:var(--font-mono);font-size:10px;color:var(--muted)">exposure: <span style="color:var(--purple)">Kubernetes basics</span></div>
-      </div>
-      <div class="sk-card sk-card--4">
-        <div class="sk-card__idx">[ 04 ]</div>
-        <span class="sk-card__ico">🏗️</span>
-        <div class="sk-card__name">INFRA AS CODE</div>
-        <div class="sk-card__desc">Version-controlled, repeatable infrastructure. Click-ops is not real ops.</div>
-        <div class="sk-tags">
-          <span class="sk-tag sk-tag--amber">Terraform</span>
-          <span class="sk-tag sk-tag--amber">Ansible</span>
-=======
         <div class="sk-card__desc">Containerising apps with Docker and serving them through Nginx. Consistent environments every time.</div>
         <div class="sk-tags">
           <span class="sk-tag sk-tag--pink">Docker</span>
@@ -2336,21 +2169,10 @@ ul  { list-style: none; }
           <span class="sk-tag sk-tag--amber">Bash</span>
           <span class="sk-tag sk-tag--amber">Shell Scripting</span>
           <span class="sk-tag sk-tag--amber">Cron Jobs</span>
->>>>>>> c267416 (uploaded new version of portfolio and resume)
         </div>
       </div>
       <div class="sk-card sk-card--5">
         <div class="sk-card__idx">[ 05 ]</div>
-<<<<<<< HEAD
-        <span class="sk-card__ico">💻</span>
-        <div class="sk-card__name">SCRIPTING // LINUX</div>
-        <div class="sk-card__desc">Automating everything automatable. Shell scripts that make ops life better.</div>
-        <div class="sk-tags">
-          <span class="sk-tag sk-tag--blue">Bash</span>
-          <span class="sk-tag sk-tag--blue">Shell</span>
-          <span class="sk-tag sk-tag--blue">Linux</span>
-          <span class="sk-tag sk-tag--blue">SQL</span>
-=======
         <span class="sk-card__ico">🗄️</span>
         <div class="sk-card__name">DATABASE // SQL</div>
         <div class="sk-card__desc">Designing and querying relational databases. Built real apps with MySQL and XAMPP locally.</div>
@@ -2359,26 +2181,18 @@ ul  { list-style: none; }
           <span class="sk-tag sk-tag--blue">SQL</span>
           <span class="sk-tag sk-tag--blue">XAMPP</span>
           <span class="sk-tag sk-tag--blue">phpMyAdmin</span>
->>>>>>> c267416 (uploaded new version of portfolio and resume)
         </div>
       </div>
       <div class="sk-card sk-card--6">
         <div class="sk-card__idx">[ 06 ]</div>
         <span class="sk-card__ico">🌐</span>
         <div class="sk-card__name">WEB STACK</div>
-<<<<<<< HEAD
-        <div class="sk-card__desc">Building and deploying web applications with core web technologies.</div>
-        <div class="sk-tags">
-          <span class="sk-tag sk-tag--lime">PHP</span>
-          <span class="sk-tag sk-tag--lime">HTML/CSS</span>
-=======
         <div class="sk-card__desc">Built real-world web apps from scratch — frontend to backend to database — using the core web stack.</div>
         <div class="sk-tags">
           <span class="sk-tag sk-tag--lime">PHP</span>
           <span class="sk-tag sk-tag--lime">HTML</span>
           <span class="sk-tag sk-tag--lime">CSS</span>
           <span class="sk-tag sk-tag--lime">JavaScript</span>
->>>>>>> c267416 (uploaded new version of portfolio and resume)
           <span class="sk-tag sk-tag--lime">MySQL</span>
         </div>
       </div>
@@ -2414,49 +2228,18 @@ ul  { list-style: none; }
       <h2 class="section__h2">PRO<span class="g-pink">JECTS</span></h2>
     </div>
     <div class="proj__grid stagger">
-<<<<<<< HEAD
-=======
 
       <!-- 01 -->
->>>>>>> c267416 (uploaded new version of portfolio and resume)
       <div class="proj-card proj-card--1">
         <div class="proj-card__corner"></div>
         <div class="proj-card__num">01</div>
         <div class="proj-card__badge">🔄 FULL_DEVOPS</div>
-<<<<<<< HEAD
-        <h3 class="proj-card__title">AUTOMATED DEVOPS PIPELINE USING JENKINS, DOCKER &amp; AWS</h3>
-        <p class="proj-card__desc">Deployed a web application using Nginx integrated with GitHub, Jenkins CI/CD, and Docker. Configured a complete Jenkins pipeline with build, test, and deployment stages to automate end-to-end application delivery on AWS infrastructure.</p>
-=======
         <h3 class="proj-card__title">AUTOMATED DEVOPS PIPELINE — JENKINS, DOCKER &amp; AWS</h3>
         <p class="proj-card__desc">Built a complete end-to-end CI/CD pipeline. A GitHub webhook triggers Jenkins automatically on every commit → Jenkins builds a Docker image of the app → container is deployed and served via Nginx on AWS EC2. Used a demo HTML/CSS portfolio site as the deployed application. Zero manual deployment steps.</p>
->>>>>>> c267416 (uploaded new version of portfolio and resume)
         <div class="proj-card__tags">
           <span class="proj-card__tag sk-tag--cyan">Jenkins</span>
           <span class="proj-card__tag sk-tag--cyan">Docker</span>
           <span class="proj-card__tag sk-tag--cyan">AWS EC2</span>
-<<<<<<< HEAD
-          <span class="proj-card__tag sk-tag--cyan">GitHub</span>
-          <span class="proj-card__tag sk-tag--cyan">Nginx</span>
-          <span class="proj-card__tag sk-tag--cyan">CI/CD</span>
-        </div>
-        <a href="#" class="proj-card__arrow" aria-label="View Jenkins Docker AWS Pipeline project — coming soon">VIEW_PROJECT &nbsp;→</a>
-      </div>
-      <div class="proj-card proj-card--2">
-        <div class="proj-card__corner" aria-hidden="true"></div>
-        <div class="proj-card__num" aria-hidden="true">02</div>
-        <div class="proj-card__badge">☁️ CLOUD_INFRA</div>
-        <h3 class="proj-card__title">CLOUD-BASED STATIC WEBSITE DEPLOYMENT USING AWS S3</h3>
-        <p class="proj-card__desc">Hosted a static web application using AWS S3 and EC2. Configured cloud infrastructure to ensure high availability, scalability, and reliable performance with automated provisioning and deployment workflows.</p>
-        <div class="proj-card__tags">
-          <span class="proj-card__tag sk-tag--purple">AWS S3</span>
-          <span class="proj-card__tag sk-tag--purple">AWS EC2</span>
-          <span class="proj-card__tag sk-tag--purple">HTML/CSS</span>
-          <span class="proj-card__tag sk-tag--purple">Cloud Infra</span>
-          <span class="proj-card__tag sk-tag--purple">Static Hosting</span>
-        </div>
-        <a href="#" class="proj-card__arrow" aria-label="View AWS S3 Static Hosting project — coming soon">VIEW_PROJECT &nbsp;→</a>
-      </div>
-=======
           <span class="proj-card__tag sk-tag--cyan">GitHub Webhooks</span>
           <span class="proj-card__tag sk-tag--cyan">Nginx</span>
           <span class="proj-card__tag sk-tag--cyan">Linux</span>
@@ -2536,7 +2319,6 @@ ul  { list-style: none; }
         </div>
       </div>
 
->>>>>>> c267416 (uploaded new version of portfolio and resume)
     </div>
   </div>
 </section>
@@ -2557,22 +2339,13 @@ ul  { list-style: none; }
       <div class="edu-item edu-item--1">
         <div class="edu-item__left">
           <div class="edu-item__yr">2024 — PRESENT</div>
-<<<<<<< HEAD
-          <div class="edu-item__role">DEVOPS WITH AWS</div>
-          <div class="edu-item__org">JSpiders, Bangalore</div>
-=======
           <div class="edu-item__role">DEVOPS WITH AWS STUDENT</div>
           <div class="edu-item__org">6-Month Course · Bangalore</div>
->>>>>>> c267416 (uploaded new version of portfolio and resume)
         </div>
         <ul class="edu-item__pts">
           <li>Completed DevOps with AWS course covering Jenkins, Docker, Kubernetes, Terraform and CI/CD pipelines.</li>
           <li>Built and deployed real-world projects including automated pipelines and cloud infrastructure on AWS.</li>
-<<<<<<< HEAD
-          <li>Earned DevOps with AWS certification from JSpiders training program.</li>
-=======
           <li>Earned DevOps with AWS certification upon course completion.</li>
->>>>>>> c267416 (uploaded new version of portfolio and resume)
         </ul>
       </div>
       <div class="edu-item edu-item--2">
@@ -2623,11 +2396,7 @@ ul  { list-style: none; }
         <div class="cert-card__glow"></div>
         <span class="cert-card__ico">☁️</span>
         <div class="cert-card__name">DevOps with AWS Certification</div>
-<<<<<<< HEAD
-        <div class="cert-card__org">JSpiders, Bangalore</div>
-=======
         <div class="cert-card__org">DevOps with AWS · 6-Month Course</div>
->>>>>>> c267416 (uploaded new version of portfolio and resume)
       </div>
     </div>
   </div>
@@ -2681,13 +2450,6 @@ ul  { list-style: none; }
           <span class="ct-link__ico" aria-hidden="true">💼</span>
           <div><div class="ct-link__name">LINKEDIN</div><div class="ct-link__val">linkedin.com/in/dhanush-s-033073359</div></div>
         </a>
-<<<<<<< HEAD
-        <a href="tel:+918946061113" class="ct-link ct-link--3" aria-label="Call Dhanush at +91 8946061113">
-          <span class="ct-link__ico" aria-hidden="true">📞</span>
-          <div><div class="ct-link__name">PHONE</div><div class="ct-link__val">+91-8946061113</div></div>
-        </a>
-=======
->>>>>>> c267416 (uploaded new version of portfolio and resume)
         <a href="https://github.com/dhanush-666" target="_blank" rel="noopener noreferrer" class="ct-link ct-link--4" aria-label="Visit Dhanush's GitHub profile (opens in new tab)">
           <span class="ct-link__ico" aria-hidden="true">🐙</span>
           <div><div class="ct-link__name">GITHUB</div><div class="ct-link__val">github.com/dhanush-666</div></div>
@@ -2704,11 +2466,7 @@ ul  { list-style: none; }
 
 <!-- FOOTER -->
 <footer class="footer">
-<<<<<<< HEAD
-  <p>© 2026 <span>DHANUSH_S</span> // aspiring_devops_engineer</p>
-=======
   <p>© 2026 <span>DHANUSH_S</span> // devops_engineer</p>
->>>>>>> c267416 (uploaded new version of portfolio and resume)
   <p><span>ERODE, TAMIL NADU</span> :: built_with_passion 🚀</p>
 </footer>
 
@@ -2716,25 +2474,13 @@ ul  { list-style: none; }
 <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
 
 <script>
-<<<<<<< HEAD
-/* ── LOADER ── */
-=======
 /* ── LOADER — faster on mobile to reduce TBT ── */
->>>>>>> c267416 (uploaded new version of portfolio and resume)
 const stages = ['booting_system...','loading_modules...','connecting_cloud...','deploying_portfolio...','launch!'];
 let si = 0, prog = 0;
 const lbar = document.getElementById('lbar');
 const lpct = document.getElementById('lpct');
 const lsub = document.getElementById('ld-sub');
 
-<<<<<<< HEAD
-const lt = setInterval(() => {
-  prog += Math.random() * 12 + 4;
-  if (prog >= 100) {
-    prog = 100;
-    clearInterval(lt);
-    setTimeout(() => document.getElementById('loader').classList.add('out'), 600);
-=======
 /* On mobile use faster interval to get out of the way quicker */
 const loaderSpeed = window.innerWidth < 768 ? 30 : 60;
 const loaderStep  = window.innerWidth < 768 ? 18 : 12;
@@ -2745,17 +2491,12 @@ const lt = setInterval(() => {
     prog = 100;
     clearInterval(lt);
     setTimeout(() => document.getElementById('loader').classList.add('out'), 300);
->>>>>>> c267416 (uploaded new version of portfolio and resume)
   }
   lbar.style.width = prog + '%';
   lpct.textContent = Math.floor(prog) + '%';
   const ni = Math.floor((prog / 100) * stages.length);
   if (ni !== si && ni < stages.length) { si = ni; lsub.textContent = stages[si]; }
-<<<<<<< HEAD
-}, 60);
-=======
 }, loaderSpeed);
->>>>>>> c267416 (uploaded new version of portfolio and resume)
 
 /* ── CUSTOM CURSOR (desktop only) ── */
 const dot  = document.getElementById('cur');
@@ -2998,11 +2739,6 @@ scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-<<<<<<< HEAD
-/* ── EMAILJS CONTACT FORM ── */
-// STEP 1: Replace YOUR_PUBLIC_KEY with your EmailJS public key
-emailjs.init('JeQgg6BNyAPyGNX3j');
-=======
 /* ── THEME TOGGLE (dark ↔ light) ── */
 const themeToggle = document.getElementById('themeToggle');
 const themeKnob   = document.getElementById('themeKnob');
@@ -3035,7 +2771,6 @@ function initEmailJS() {
   if (typeof emailjs === 'undefined') return; // not loaded yet, will retry
   // ⚠️ SECURITY: Go to emailjs.com → Account → Security → add dhanush-666.github.io as allowed domain
   emailjs.init('JeQgg6BNyAPyGNX3j');
->>>>>>> c267416 (uploaded new version of portfolio and resume)
 
 // Enter key navigation between fields
 const cfName  = document.getElementById('cf-name');
@@ -3112,8 +2847,6 @@ cfSubmit.addEventListener('click', () => {
     console.error('EmailJS error:', err);
   });
 });
-<<<<<<< HEAD
-=======
 } // end initEmailJS
 
 // Call now if EmailJS already loaded, else wait for it
@@ -3128,7 +2861,6 @@ if (typeof emailjs !== 'undefined') {
     else if (attempts > 50) clearInterval(ejsPoll); // give up after 5s
   }, 100);
 }
->>>>>>> c267416 (uploaded new version of portfolio and resume)
 </script>
 </body>
 </html>
