@@ -20,9 +20,17 @@
 <meta name="theme-color" content="#00ffe5"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<<<<<<< HEAD
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <!-- EmailJS SDK -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+=======
+<!-- Non-blocking font load — prevents render blocking on mobile -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap"/></noscript>
+<!-- EmailJS deferred — never blocks render -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
 
 <style>
 /* Skip to content — keyboard accessibility */
@@ -86,6 +94,340 @@
 }
 
 /* ============================================================
+<<<<<<< HEAD
+=======
+   LIGHT MODE — applied via [data-theme="light"] on <html>
+   ALL neon accents are replaced with deep readable equivalents:
+     --cyan   → deep teal   #0369a1
+     --purple → deep violet #6d28d9
+     --pink   → deep rose   #be185d
+     --lime   → deep green  #15803d
+     --amber  → deep amber  #b45309
+     --blue   → deep blue   #1d4ed8
+   ============================================================ */
+[data-theme="light"] {
+  --bg:     #f4f6fc;
+  --bg2:    #eaecf7;
+  --bg3:    #dde0f0;
+  --text:   #0d0d2b;
+  --muted:  rgba(10,10,40,0.72);
+  --grid:   rgba(3,105,161,0.06);
+
+  /* Override every accent so NOTHING neon survives into light mode */
+  --cyan:   #0369a1;
+  --purple: #6d28d9;
+  --pink:   #be185d;
+  --lime:   #15803d;
+  --amber:  #b45309;
+  --blue:   #1d4ed8;
+}
+
+/* Body & base */
+[data-theme="light"] body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Nav */
+[data-theme="light"] .nav {
+  background: rgba(244,246,252,.94);
+  border-bottom: 1px solid rgba(3,105,161,.12);
+}
+[data-theme="light"] .nav__links a { color: rgba(10,10,40,0.75); }
+[data-theme="light"] .nav__links a:hover { color: var(--cyan); }
+[data-theme="light"] .nav__hire {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+[data-theme="light"] .nav__logo { background: linear-gradient(90deg,var(--cyan),var(--purple)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+
+/* Mobile drawer */
+[data-theme="light"] .mob-nav {
+  background: rgba(244,246,252,.99);
+  border-left-color: rgba(3,105,161,.15);
+}
+[data-theme="light"] .mob-nav a { color: rgba(10,10,40,0.8); }
+[data-theme="light"] .mob-nav a:hover { color: var(--cyan); }
+
+/* Loader */
+[data-theme="light"] .loader { background: var(--bg); }
+
+/* Cards and surfaces */
+[data-theme="light"] .sk-card,
+[data-theme="light"] .proj-card,
+[data-theme="light"] .cert-card,
+[data-theme="light"] .edu-item,
+[data-theme="light"] .ct-link {
+  background: #ffffff;
+  border-color: rgba(3,105,161,.13);
+}
+[data-theme="light"] .sk-card:hover  { background: #f8f9ff; }
+[data-theme="light"] .proj-card:hover { background: #f8f9ff; transform: translate(-4px,-4px); }
+[data-theme="light"] .edu-item:hover  { background: #f8f9ff; }
+[data-theme="light"] .ct-link:hover   { background: #f0f4ff; }
+[data-theme="light"] .about__card {
+  background: #ffffff;
+  border-color: rgba(3,105,161,.13);
+}
+
+/* Skill card top border hover — stays readable */
+[data-theme="light"] .sk-card--1::before { background: linear-gradient(90deg,#0369a1,#6d28d9); }
+[data-theme="light"] .sk-card--2::before { background: linear-gradient(90deg,#6d28d9,#be185d); }
+[data-theme="light"] .sk-card--3::before { background: linear-gradient(90deg,#be185d,#b45309); }
+[data-theme="light"] .sk-card--4::before { background: linear-gradient(90deg,#b45309,#15803d); }
+[data-theme="light"] .sk-card--5::before { background: linear-gradient(90deg,#1d4ed8,#0369a1); }
+[data-theme="light"] .sk-card--6::before { background: linear-gradient(90deg,#15803d,#0369a1); }
+
+/* Skill tags — readable on white */
+[data-theme="light"] .sk-tag--cyan   { border-color:rgba(3,105,161,.3);   color:#0369a1;  background:rgba(3,105,161,.07); }
+[data-theme="light"] .sk-tag--purple { border-color:rgba(109,40,217,.3);  color:#6d28d9;  background:rgba(109,40,217,.07); }
+[data-theme="light"] .sk-tag--pink   { border-color:rgba(190,24,93,.3);   color:#be185d;  background:rgba(190,24,93,.07); }
+[data-theme="light"] .sk-tag--amber  { border-color:rgba(180,83,9,.3);    color:#b45309;  background:rgba(180,83,9,.07); }
+[data-theme="light"] .sk-tag--blue   { border-color:rgba(29,78,216,.3);   color:#1d4ed8;  background:rgba(29,78,216,.07); }
+[data-theme="light"] .sk-tag--lime   { border-color:rgba(21,128,61,.3);   color:#15803d;  background:rgba(21,128,61,.07); }
+
+/* Project card tags */
+[data-theme="light"] .proj-card__tag { color: var(--text); }
+[data-theme="light"] .proj-card--1 { border-color:rgba(3,105,161,.2); }
+[data-theme="light"] .proj-card--1:hover { border-color:rgba(3,105,161,.5); box-shadow:6px 6px 0 rgba(3,105,161,.15); }
+[data-theme="light"] .proj-card--2 { border-color:rgba(109,40,217,.2); }
+[data-theme="light"] .proj-card--2:hover { border-color:rgba(109,40,217,.5); box-shadow:6px 6px 0 rgba(109,40,217,.15); }
+[data-theme="light"] .proj-card--1 .proj-card__corner { border-color:transparent rgba(3,105,161,.3) transparent transparent; }
+[data-theme="light"] .proj-card--2 .proj-card__corner { border-color:transparent rgba(109,40,217,.3) transparent transparent; }
+[data-theme="light"] .proj-card--1 .proj-card__badge { border-color:rgba(3,105,161,.3); color:#0369a1; background:rgba(3,105,161,.07); }
+[data-theme="light"] .proj-card--2 .proj-card__badge { border-color:rgba(109,40,217,.3); color:#6d28d9; background:rgba(109,40,217,.07); }
+[data-theme="light"] .proj-card--1 .proj-card__arrow { color:#0369a1; }
+[data-theme="light"] .proj-card__num { opacity: .06; color: #000; }
+
+/* Cert cards */
+[data-theme="light"] .cert-card--1 { border-color:rgba(180,83,9,.2); }
+[data-theme="light"] .cert-card--1:hover { border-color:rgba(180,83,9,.5); box-shadow:0 8px 30px rgba(180,83,9,.1); }
+[data-theme="light"] .cert-card--2 { border-color:rgba(29,78,216,.2); }
+[data-theme="light"] .cert-card--2:hover { border-color:rgba(29,78,216,.5); box-shadow:0 8px 30px rgba(29,78,216,.1); }
+
+/* About info rows */
+[data-theme="light"] .info-row { background:rgba(3,105,161,.04); }
+[data-theme="light"] .info-row__label { color:rgba(3,105,161,.6); }
+[data-theme="light"] .info-row__val a { color:var(--cyan); }
+
+/* Edu items */
+[data-theme="light"] .edu-item--1 { border-color:rgba(3,105,161,.15); }
+[data-theme="light"] .edu-item--1:hover { border-color:rgba(3,105,161,.4); }
+[data-theme="light"] .edu-item--2 { border-color:rgba(109,40,217,.15); }
+[data-theme="light"] .edu-item--2:hover { border-color:rgba(109,40,217,.4); }
+[data-theme="light"] .edu-item--3 { border-color:rgba(190,24,93,.15); }
+[data-theme="light"] .edu-item--3:hover { border-color:rgba(190,24,93,.4); }
+[data-theme="light"] .edu-item__pts li { color:rgba(13,13,43,.65); }
+[data-theme="light"] .edu-item--1 .edu-item__pts li::before { color:#0369a1; }
+[data-theme="light"] .edu-item--2 .edu-item__pts li::before { color:#6d28d9; }
+[data-theme="light"] .edu-item--3 .edu-item__pts li::before { color:#be185d; }
+
+/* Section headings */
+[data-theme="light"] .section__pre { color:var(--cyan); }
+[data-theme="light"] .section__pre::before { background:var(--cyan); box-shadow:none; }
+[data-theme="light"] .g-cyan   { background:linear-gradient(90deg,#0369a1,#6d28d9); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+[data-theme="light"] .g-purple { background:linear-gradient(90deg,#6d28d9,#be185d); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+[data-theme="light"] .g-pink   { background:linear-gradient(90deg,#be185d,#b45309); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+[data-theme="light"] .c-cyan   { color:#0369a1; text-shadow:none; }
+[data-theme="light"] .c-purple { color:#6d28d9; text-shadow:none; }
+[data-theme="light"] .c-pink   { color:#be185d; text-shadow:none; }
+[data-theme="light"] .c-amber  { color:#b45309; text-shadow:none; }
+
+/* Section h2 underline */
+[data-theme="light"] .section__h2::after { background:linear-gradient(90deg,#0369a1,#6d28d9); box-shadow:none; }
+
+/* Hero */
+[data-theme="light"] .hero__status { border-color:rgba(3,105,161,.2); background:rgba(3,105,161,.06); color:#0369a1; }
+[data-theme="light"] .status-dot   { background:#15803d; box-shadow:0 0 8px #15803d; }
+[data-theme="light"] .hero__prompt { color:#0369a1; }
+[data-theme="light"] .hero__role span { color:#b45309; }
+[data-theme="light"] .hero__desc   { color:rgba(13,13,43,.6); }
+[data-theme="light"] .hero__stats  { border-top-color:rgba(3,105,161,.15); }
+[data-theme="light"] .stat { }
+[data-theme="light"] .stat + .stat { border-left-color:rgba(3,105,161,.12); }
+[data-theme="light"] .stat__lbl { color:rgba(13,13,43,.5); }
+
+/* Buttons */
+[data-theme="light"] .btn--primary { background:linear-gradient(135deg,#0369a1,#6d28d9); color:#fff; }
+[data-theme="light"] .btn--primary:hover { box-shadow:6px 6px 0 rgba(3,105,161,.35); }
+[data-theme="light"] .btn--resume  { background:linear-gradient(135deg,#15803d,#0369a1); color:#fff; }
+[data-theme="light"] .btn--resume:hover  { box-shadow:6px 6px 0 rgba(21,128,61,.35); }
+[data-theme="light"] .btn--outline { border-color:#6d28d9; color:#6d28d9; background:rgba(109,40,217,.05); }
+[data-theme="light"] .btn--outline:hover { box-shadow:6px 6px 0 rgba(109,40,217,.25); }
+
+/* Ticker */
+[data-theme="light"] .ticker { background:var(--bg2); border-color:rgba(3,105,161,.1); }
+[data-theme="light"] .ticker::before { background:linear-gradient(90deg,var(--bg2),transparent); }
+[data-theme="light"] .ticker::after  { background:linear-gradient(-90deg,var(--bg2),transparent); }
+[data-theme="light"] .ticker__item  { color:rgba(13,13,43,.55); }
+[data-theme="light"] .mq-band { background:rgba(109,40,217,.06); border-color:rgba(109,40,217,.15); }
+[data-theme="light"] .mq-item { color:rgba(109,40,217,.75); }
+
+/* Contact */
+[data-theme="light"] .contact__mailto { background:linear-gradient(135deg,rgba(3,105,161,.1),rgba(109,40,217,.1)); border-color:rgba(3,105,161,.25); color:#0369a1; }
+[data-theme="light"] .contact__mailto:hover { box-shadow:0 0 20px rgba(3,105,161,.15); }
+[data-theme="light"] .contact__sub { color:rgba(13,13,43,.6); }
+[data-theme="light"] .ct-link--1:hover { border-color:rgba(3,105,161,.4); }
+[data-theme="light"] .ct-link--2:hover { border-color:rgba(109,40,217,.4); }
+[data-theme="light"] .ct-link--3:hover { border-color:rgba(190,24,93,.4); }
+[data-theme="light"] .ct-link--4:hover { border-color:rgba(29,78,216,.4); }
+[data-theme="light"] .ct-link__name { color:var(--text); }
+[data-theme="light"] .ct-link__val  { color:rgba(13,13,43,.55); }
+[data-theme="light"] .status-box { background:rgba(21,128,61,.06); border-color:rgba(21,128,61,.2); }
+[data-theme="light"] .status-dot2 { background:#15803d; box-shadow:0 0 6px #15803d; }
+
+/* Contact form */
+[data-theme="light"] .cf-label { color:#0369a1; }
+[data-theme="light"] .cf-input { background:rgba(3,105,161,.03); border-color:rgba(3,105,161,.18); color:var(--text); }
+[data-theme="light"] .cf-input:focus { border-color:#0369a1; background:rgba(3,105,161,.06); box-shadow:0 0 16px rgba(3,105,161,.1); }
+[data-theme="light"] .cf-input::placeholder { color:rgba(13,13,43,.3); }
+[data-theme="light"] .cf-btn { background:linear-gradient(135deg,#0369a1,#6d28d9); color:#fff; }
+[data-theme="light"] .cf-btn:hover:not(:disabled) { box-shadow:6px 6px 0 rgba(3,105,161,.3); }
+[data-theme="light"] .cf-status.success { color:#15803d; background:rgba(21,128,61,.07); border-color:rgba(21,128,61,.2); }
+[data-theme="light"] .cf-status.error   { color:#be185d; background:rgba(190,24,93,.07); border-color:rgba(190,24,93,.2); }
+
+/* ── LIGHT MODE TEXT CONTRAST FIXES ── */
+/* Hero description — was almost invisible */
+[data-theme="light"] .hero__desc {
+  color: rgba(10,10,40,0.72);
+}
+/* Hero role text */
+[data-theme="light"] .hero__role {
+  color: rgba(10,10,40,0.65);
+}
+/* Stat labels */
+[data-theme="light"] .stat__lbl {
+  color: rgba(10,10,40,0.55);
+}
+/* About card paragraphs */
+[data-theme="light"] .about__card p {
+  color: rgba(10,10,40,0.7);
+}
+/* Skill card description */
+[data-theme="light"] .sk-card__desc {
+  color: rgba(10,10,40,0.65);
+}
+[data-theme="light"] .sk-card__idx {
+  color: rgba(10,10,40,0.4);
+}
+/* Project card description */
+[data-theme="light"] .proj-card__desc {
+  color: rgba(10,10,40,0.65);
+}
+/* Education bullet points */
+[data-theme="light"] .edu-item__pts li {
+  color: rgba(10,10,40,0.68);
+}
+[data-theme="light"] .edu-item__org {
+  color: rgba(10,10,40,0.5);
+}
+/* Cert org */
+[data-theme="light"] .cert-card__org {
+  color: rgba(10,10,40,0.5);
+}
+/* Contact sub text */
+[data-theme="light"] .contact__sub {
+  color: rgba(10,10,40,0.7);
+}
+/* Contact link values */
+[data-theme="light"] .ct-link__val {
+  color: rgba(10,10,40,0.55);
+}
+/* Ticker items */
+[data-theme="light"] .ticker__item {
+  color: rgba(10,10,40,0.55);
+}
+/* Footer text */
+[data-theme="light"] .footer p {
+  color: rgba(10,10,40,0.5);
+}
+/* Loader percent */
+[data-theme="light"] .loader__pct {
+  color: rgba(10,10,40,0.5);
+}
+/* Info row label */
+[data-theme="light"] .info-row__label {
+  color: rgba(3,105,161,0.7);
+}
+/* School name in about */
+[data-theme="light"] .edu__school {
+  color: rgba(10,10,40,0.55);
+}
+/* Contact form placeholder */
+[data-theme="light"] .cf-input::placeholder {
+  color: rgba(10,10,40,0.3);
+}
+
+/* Cursor */
+[data-theme="light"] .cur-dot  { background:#0369a1; box-shadow:0 0 8px #0369a1; }
+[data-theme="light"] .cur-ring { border-color:rgba(3,105,161,.5); }
+
+/* Custom cursor hover in light mode */
+[data-theme="light"] .glitch-line { opacity:.2; }
+[data-theme="light"] .bg-scanlines { opacity:.3; }
+[data-theme="light"] .orb { opacity:.1; filter:blur(130px) saturate(.6); }
+
+/* Scroll top */
+[data-theme="light"] .scroll-top { background:rgba(3,105,161,.1); border-color:rgba(3,105,161,.3); color:#0369a1; }
+[data-theme="light"] .scroll-top:hover { background:rgba(3,105,161,.2); box-shadow:0 0 16px rgba(3,105,161,.2); }
+
+/* Footer */
+[data-theme="light"] .footer { border-top-color:rgba(3,105,161,.1); }
+[data-theme="light"] .footer p { color:rgba(13,13,43,.45); }
+[data-theme="light"] .footer span { color:#0369a1; }
+
+/* Skip link */
+[data-theme="light"] .skip-link { background:#0369a1; }
+
+/* Theme toggle button */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 22px;
+  background: rgba(0,255,229,.1);
+  border: 1px solid rgba(0,255,229,.3);
+  border-radius: 11px;
+  cursor: pointer;
+  position: relative;
+  transition: background .3s, border-color .3s;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background: rgba(0,255,229,.2);
+  border-color: rgba(0,255,229,.5);
+}
+
+.theme-toggle__knob {
+  position: absolute;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 8px var(--cyan);
+  transition: left .3s cubic-bezier(.34,1.56,.64,1), background .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+}
+
+[data-theme="light"] .theme-toggle {
+  background: rgba(0,100,180,.1);
+  border-color: rgba(0,100,180,.3);
+}
+
+[data-theme="light"] .theme-toggle__knob {
+  left: 21px;
+  background: #f59e0b;
+  box-shadow: 0 0 8px #f59e0b;
+}
+
+/* ============================================================
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
    BASE
    ============================================================ */
 html {
@@ -288,7 +630,11 @@ ul  { list-style: none; }
 .nav__links a {
   font-family: var(--font-mono);
   font-size: 12px;
+<<<<<<< HEAD
   color: var(--muted);
+=======
+  color: rgba(200,200,255,0.75);
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
   letter-spacing: .12em;
   position: relative;
   transition: color .2s;
@@ -387,9 +733,15 @@ ul  { list-style: none; }
   font-family: var(--font-mono);
   font-size: 14px;
   letter-spacing: .14em;
+<<<<<<< HEAD
   color: var(--muted);
   padding: .75rem 0;
   border-bottom: 1px solid rgba(255,255,255,.05);
+=======
+  color: rgba(220,220,255,0.85);
+  padding: .75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
   transition: color .2s, padding-left .2s;
 }
 .mob-nav a:hover { color: var(--cyan); padding-left: .5rem; }
@@ -558,6 +910,44 @@ ul  { list-style: none; }
   .bg-scanlines { animation: none !important; }
 }
 
+<<<<<<< HEAD
+=======
+/* ── MOBILE PERFORMANCE: disable GPU-heavy effects on small screens ──
+   Orbs with filter:blur(120px) + orbFloat animation = huge paint cost on mobile
+   Scanlines animation = continuous repaints = kills TBT
+   These are purely decorative — removing them on mobile is correct.        */
+@media (max-width: 767px) {
+  /* Kill expensive orb blur animations — biggest LCP killer */
+  .orb {
+    display: none;
+  }
+  /* Kill scanline continuous animation — big TBT contributor */
+  .bg-scanlines {
+    display: none;
+  }
+  /* Simplify grid bg on mobile */
+  .bg-grid {
+    background-size: 60px 60px;
+    opacity: .5;
+  }
+  /* Speed up scroll animations on mobile */
+  .rev, .rev-l, .rev-r, .rev-scale, .rev-blur {
+    transition-duration: 0.45s !important;
+  }
+  /* Reduce ticker animation speed drain */
+  .ticker__track { animation-duration: 25s; }
+  .mq-track      { animation-duration: 22s; }
+  /* Stop will-change on off-screen elements */
+  .orb, .bg-scanlines { will-change: auto; }
+}
+
+/* ── CONTENT VISIBILITY — skip rendering off-screen sections until needed ── */
+.about, #skills, #projects, #education, #certs, #contact {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 600px;
+}
+
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
 /* ============================================================
    TICKER BAND
    ============================================================ */
@@ -597,7 +987,11 @@ ul  { list-style: none; }
   font-size: 12px;
   letter-spacing: .1em;
   white-space: nowrap;
+<<<<<<< HEAD
   color: var(--muted);
+=======
+  color: rgba(200,200,255,0.75);
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
 }
 
 /* Marquee band (purple) */
@@ -623,7 +1017,11 @@ ul  { list-style: none; }
   gap: .5rem;
   font-family: var(--font-mono);
   font-size: 12px;
+<<<<<<< HEAD
   color: rgba(168,85,247,.7);
+=======
+  color: rgba(168,85,247,0.9);
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
   white-space: nowrap;
   letter-spacing: .08em;
 }
@@ -651,8 +1049,13 @@ ul  { list-style: none; }
   filter: blur(120px);
   opacity: .2;
   animation: orbFloat 10s ease-in-out infinite;
+<<<<<<< HEAD
   will-change: transform;   /* GPU layer hint */
   contain: strict;          /* isolate paint/layout */
+=======
+  will-change: transform;
+  contain: strict;
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
 }
 .orb--1 { width: clamp(300px,50vw,600px); height: clamp(300px,50vw,600px); background: var(--purple); top: -150px; right: -100px; animation-delay: 0s; }
 .orb--2 { width: clamp(200px,35vw,400px); height: clamp(200px,35vw,400px); background: var(--cyan);   bottom: -100px; left: -50px; animation-delay: 3s; }
@@ -711,6 +1114,12 @@ ul  { list-style: none; }
   letter-spacing: .05em;
   margin-bottom: 1rem;
   white-space: nowrap;
+<<<<<<< HEAD
+=======
+  overflow: hidden;
+  /* Shrink on very small screens to prevent cutoff */
+  max-width: 100%;
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
 }
 
 .hero__name .w1 { display: inline; opacity: 0; animation: wordIn .9s cubic-bezier(.16,1,.3,1) .2s both; }
@@ -729,7 +1138,11 @@ ul  { list-style: none; }
 
 .hero__desc {
   font-size: clamp(.85rem, 1.5vw, 1rem);
+<<<<<<< HEAD
   color: var(--muted);
+=======
+  color: rgba(200,200,255,0.78);
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
   max-width: 500px;
   line-height: 1.75;
   margin-bottom: 2.5rem;
@@ -849,7 +1262,11 @@ ul  { list-style: none; }
 .about__card p {
   font-size: 15px;
   line-height: 1.8;
+<<<<<<< HEAD
   color: var(--muted);
+=======
+  color: rgba(200,200,255,0.78);
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
   margin-bottom: 1rem;
 }
 
@@ -961,6 +1378,10 @@ ul  { list-style: none; }
   padding: 2rem;
   position: relative;
   overflow: hidden;
+<<<<<<< HEAD
+=======
+  contain: layout paint;
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
   transition: transform .3s, border-color .3s;
 }
 .proj-card:hover { transform: translate(-4px,-4px); }
@@ -987,6 +1408,13 @@ ul  { list-style: none; }
   top: .5rem; right: 1.5rem;
   opacity: .04;
   line-height: 1;
+<<<<<<< HEAD
+=======
+  pointer-events: none;
+  user-select: none;
+  max-width: 100%;
+  overflow: hidden;
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
 }
 
 .proj-card__badge {
@@ -1399,6 +1827,42 @@ ul  { list-style: none; }
    ============================================================ */
 
 /* ── SMALL PHONES: 320px – 479px (default / base styles above already cover this) ── */
+<<<<<<< HEAD
+=======
+/* Extra small phones — prevent hero name overflow */
+@media (max-width: 400px) {
+  .hero__name {
+    font-size: clamp(1.9rem, 8.5vw, 3rem);
+    letter-spacing: .02em;
+  }
+  .hero__role {
+    font-size: .75rem;
+    letter-spacing: .04em;
+  }
+  .btn {
+    padding: .75rem 1.25rem;
+    font-size: 12px;
+  }
+  .hero__btns {
+    flex-direction: column;
+  }
+  .stat__num {
+    font-size: 1.4rem;
+  }
+  .section__h2 {
+    font-size: 1.6rem;
+  }
+  .proj-card,
+  .sk-card,
+  .cert-card,
+  .edu-item {
+    padding: 1.25rem;
+  }
+  .about__card {
+    padding: 1.25rem;
+  }
+}
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
 
 /* ── LARGE PHONES: 480px+ ── */
 @media (min-width: 480px) {
@@ -1470,6 +1934,14 @@ ul  { list-style: none; }
     padding-right: 2rem;
   }
   .edu-item__yr { width: auto; }
+<<<<<<< HEAD
+=======
+
+  /* Light mode edu border */
+  [data-theme="light"] .edu-item__left {
+    border-right-color: rgba(3,105,161,.1);
+  }
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
 }
 
 /* ── LAPTOPS / iPad Pro: 1024px+ ── */
@@ -1557,6 +2029,12 @@ ul  { list-style: none; }
     <li><a href="#contact">contact</a></li>
   </ul>
   <a href="#contact" class="nav__hire" aria-label="Hire Dhanush — go to contact section">[ hire_me ]</a>
+<<<<<<< HEAD
+=======
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">
+    <span class="theme-toggle__knob" id="themeKnob">🌙</span>
+  </button>
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
   <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mob-nav">
     <span></span><span></span><span></span>
   </button>
@@ -1584,13 +2062,24 @@ ul  { list-style: none; }
     <div class="orb orb--3"></div>
   </div>
   <div class="hero__inner">
+<<<<<<< HEAD
     <div class="hero__status">
       <span class="status-dot"></span>open_to_work :: erode, tamil_nadu
+=======
+    <div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:2rem;opacity:0;animation:fadeUp .8s ease .3s both">
+      <div class="hero__status" style="margin-bottom:0">
+        <span class="status-dot"></span>open_to_work :: erode, tamil_nadu
+      </div>
+      <div style="display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--lime);padding:.4rem 1rem;border:1px solid rgba(200,241,53,.3);background:rgba(200,241,53,.06);clip-path:polygon(8px 0%,100% 0%,100% calc(100% - 8px),calc(100% - 8px) 100%,0% 100%,0% 8px)">
+        <span style="width:6px;height:6px;background:var(--lime);border-radius:50%;box-shadow:0 0 8px var(--lime);display:inline-block;flex-shrink:0"></span>immediate_joiner
+      </div>
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
     </div>
     <p class="hero__prompt">// whoami</p>
     <h1 class="hero__name">
       <span class="w1 g-cyan">DHANUSH</span><span class="w2 g-purple">_S</span>
     </h1>
+<<<<<<< HEAD
     <p class="hero__role">DevOps Engineer &nbsp;|&nbsp; <span>Cloud Infra</span> &nbsp;|&nbsp; CI/CD &nbsp;|&nbsp; Containers</p>
     <p class="hero__desc">Fresher DevOps engineer passionate about automating deployments, orchestrating containers, and building cloud infrastructure that scales. Ready to ship from day one.</p>
     <div class="hero__btns">
@@ -1603,6 +2092,20 @@ ul  { list-style: none; }
       <div class="stat"><span class="stat__num c-purple">MCA</span><span class="stat__lbl">qualification</span></div>
       <div class="stat"><span class="stat__num c-pink">75%</span><span class="stat__lbl">academic_score</span></div>
       <div class="stat"><span class="stat__num c-amber">15+</span><span class="stat__lbl">tools_mastered</span></div>
+=======
+    <p class="hero__role">DevOps Engineer &nbsp;|&nbsp; <span>Cloud Engineer</span> &nbsp;|&nbsp; CI/CD &nbsp;|&nbsp; AWS</p>
+    <p class="hero__desc">MCA fresher from Erode with hands-on experience in Jenkins, Docker, AWS and Linux. I build automated pipelines, containerise apps, and deploy cloud infrastructure. Completed a 6-month DevOps with AWS course. Ready from day one.</p>
+    <div class="hero__btns">
+      <a href="#projects" class="btn btn--primary" aria-label="View Dhanush's projects">[ view_work ]</a>
+      <a href="https://github.com/dhanush-666/portfolio-dhanush/raw/main/Dhanush_S_Resume.pdf" download class="btn btn--resume" aria-label="Download Dhanush's resume PDF">⬇ download_resume</a>
+      <a href="#contact" class="btn btn--outline" aria-label="Go to contact section">[ contact_me ]</a>
+    </div>
+    <div class="hero__stats">
+      <div class="stat"><span class="stat__num c-cyan">5</span><span class="stat__lbl">projects_built</span></div>
+      <div class="stat"><span class="stat__num c-purple">MCA</span><span class="stat__lbl">qualification</span></div>
+      <div class="stat"><span class="stat__num c-pink">75%</span><span class="stat__lbl">academic_score</span></div>
+      <div class="stat"><span class="stat__num c-amber">8+</span><span class="stat__lbl">tools_used</span></div>
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
     </div>
   </div>
 </section>
@@ -1613,6 +2116,7 @@ ul  { list-style: none; }
     <div class="ticker__item"><span style="color:var(--cyan)">▶</span> Docker</div>
     <div class="ticker__item"><span style="color:var(--purple)">▶</span> Jenkins</div>
     <div class="ticker__item"><span style="color:var(--pink)">▶</span> AWS</div>
+<<<<<<< HEAD
     <div class="ticker__item"><span style="color:var(--amber)">▶</span> GitHub</div>
     <div class="ticker__item"><span style="color:var(--lime)">▶</span> Linux</div>
     <div class="ticker__item"><span style="color:var(--blue)">▶</span> Kubernetes</div>
@@ -1634,6 +2138,35 @@ ul  { list-style: none; }
     <div class="ticker__item"><span style="color:var(--amber)">▶</span> Shell Scripting</div>
     <div class="ticker__item"><span style="color:var(--lime)">▶</span> CI/CD Pipelines</div>
     <div class="ticker__item"><span style="color:var(--blue)">▶</span> MySQL</div>
+=======
+    <div class="ticker__item"><span style="color:var(--amber)">▶</span> Git / GitHub</div>
+    <div class="ticker__item"><span style="color:var(--lime)">▶</span> Linux</div>
+    <div class="ticker__item"><span style="color:var(--cyan)">▶</span> Bash Scripting</div>
+    <div class="ticker__item"><span style="color:var(--purple)">▶</span> Nginx</div>
+    <div class="ticker__item"><span style="color:var(--pink)">▶</span> MySQL</div>
+    <div class="ticker__item"><span style="color:var(--amber)">▶</span> PHP</div>
+    <div class="ticker__item"><span style="color:var(--lime)">▶</span> HTML / CSS</div>
+    <div class="ticker__item"><span style="color:var(--blue)">▶</span> CI/CD Pipelines</div>
+    <div class="ticker__item"><span style="color:var(--purple)">▶</span> Maven</div>
+    <div class="ticker__item"><span style="color:var(--cyan)">▶</span> AWS EC2</div>
+    <div class="ticker__item"><span style="color:var(--purple)">▶</span> AWS S3</div>
+    <div class="ticker__item"><span style="color:var(--pink)">▶</span> IAM / VPC</div>
+    <div class="ticker__item"><span style="color:var(--cyan)">▶</span> Docker</div>
+    <div class="ticker__item"><span style="color:var(--purple)">▶</span> Jenkins</div>
+    <div class="ticker__item"><span style="color:var(--pink)">▶</span> AWS</div>
+    <div class="ticker__item"><span style="color:var(--amber)">▶</span> Git / GitHub</div>
+    <div class="ticker__item"><span style="color:var(--lime)">▶</span> Linux</div>
+    <div class="ticker__item"><span style="color:var(--cyan)">▶</span> Bash Scripting</div>
+    <div class="ticker__item"><span style="color:var(--purple)">▶</span> Nginx</div>
+    <div class="ticker__item"><span style="color:var(--pink)">▶</span> MySQL</div>
+    <div class="ticker__item"><span style="color:var(--amber)">▶</span> PHP</div>
+    <div class="ticker__item"><span style="color:var(--lime)">▶</span> HTML / CSS</div>
+    <div class="ticker__item"><span style="color:var(--blue)">▶</span> CI/CD Pipelines</div>
+    <div class="ticker__item"><span style="color:var(--purple)">▶</span> Maven</div>
+    <div class="ticker__item"><span style="color:var(--cyan)">▶</span> AWS EC2</div>
+    <div class="ticker__item"><span style="color:var(--purple)">▶</span> AWS S3</div>
+    <div class="ticker__item"><span style="color:var(--pink)">▶</span> IAM / VPC</div>
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
   </div>
 </div>
 
@@ -1648,9 +2181,16 @@ ul  { list-style: none; }
     </div>
     <div class="about__grid rev-blur">
       <div class="about__card">
+<<<<<<< HEAD
         <p>I'm <strong style="color:var(--cyan)">Dhanush S</strong> — a fresher DevOps Engineer with an MCA from Kongu Arts and Science College, Erode. Passionate about automating deployments, managing cloud infrastructure, and building systems that just <em>work</em>.</p>
         <p>Skilled in Git, Jenkins, Docker, and AWS with a sharp focus on CI/CD pipelines, automation, and system reliability. Eager to contribute to scalable infrastructure solutions from day one.</p>
         <p style="color:var(--lime);font-family:var(--font-mono);font-size:13px;margin-top:1.5rem">&gt; status: ready_to_deploy 🚀</p>
+=======
+        <p>I'm <strong style="color:var(--cyan)">Dhanush S</strong>, a Computer Applications postgraduate from Erode, Tamil Nadu, with a passion for DevOps and Cloud Engineering. I completed a 6-month DevOps with AWS course where I got hands-on with building CI/CD pipelines, containerising applications with Docker, and provisioning cloud infrastructure on AWS.</p>
+        <p>I believe in learning by doing — every tool on this page, whether it's Linux, Bash, Jenkins, Docker, Git, AWS, Nginx, or MySQL, has been used in a real project. Across my projects I've worked on automated deployment pipelines, cloud infrastructure setups, and practical web applications built for real users.</p>
+        <p>I'm currently looking for my first professional role as a <strong style="color:var(--cyan)">DevOps</strong> or <strong style="color:var(--cyan)">Cloud Engineer</strong>. I may be a fresher, but I come ready to contribute, learn fast, and grow alongside a team that values good infrastructure and clean automation.</p>
+        <p style="color:var(--lime);font-family:var(--font-mono);font-size:13px;margin-top:1.5rem">&gt; status: ready_to_contribute 🚀</p>
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
       </div>
       <div class="about__info">
         <div class="info-row" style="border-color:var(--cyan)">
@@ -1673,6 +2213,7 @@ ul  { list-style: none; }
           <span class="info-row__label">languages_spoken</span>
           <span class="info-row__val">Tamil · English · Telugu</span>
         </div>
+<<<<<<< HEAD
         <div class="info-row" style="border-color:var(--blue)">
           <span class="info-row__label">education</span>
           <div class="info-row__val">
@@ -1688,6 +2229,8 @@ ul  { list-style: none; }
             </div>
           </div>
         </div>
+=======
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
       </div>
     </div>
   </div>
@@ -1710,6 +2253,7 @@ ul  { list-style: none; }
         <div class="sk-card__idx">[ 01 ]</div>
         <span class="sk-card__ico">☁️</span>
         <div class="sk-card__name">CLOUD // AWS</div>
+<<<<<<< HEAD
         <div class="sk-card__desc">Building and managing cloud infrastructure on AWS. Scalable, available, cost-efficient.</div>
         <div class="sk-tags">
           <span class="sk-tag sk-tag--cyan">EC2</span>
@@ -1720,17 +2264,36 @@ ul  { list-style: none; }
           <span class="sk-tag sk-tag--cyan">EBS</span>
           <span class="sk-tag sk-tag--cyan">SNS</span>
           <span class="sk-tag sk-tag--cyan">CloudWatch</span>
+=======
+        <div class="sk-card__desc">Hands-on with core AWS services — provisioning servers, managing storage, securing access, monitoring uptime.</div>
+        <div class="sk-tags">
+          <span class="sk-tag sk-tag--cyan">EC2</span>
+          <span class="sk-tag sk-tag--cyan">S3</span>
+          <span class="sk-tag sk-tag--cyan">IAM</span>
+          <span class="sk-tag sk-tag--cyan">VPC</span>
+          <span class="sk-tag sk-tag--cyan">CloudWatch</span>
+          <span class="sk-tag sk-tag--cyan">Security Groups</span>
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
         </div>
       </div>
       <div class="sk-card sk-card--2">
         <div class="sk-card__idx">[ 02 ]</div>
         <span class="sk-card__ico">⚡</span>
         <div class="sk-card__name">CI // CD PIPELINES</div>
+<<<<<<< HEAD
         <div class="sk-card__desc">Automating build, test, deploy cycles. Zero-downtime. Fast delivery.</div>
         <div class="sk-tags">
           <span class="sk-tag sk-tag--purple">Jenkins</span>
           <span class="sk-tag sk-tag--purple">GitHub Actions</span>
           <span class="sk-tag sk-tag--purple">Git</span>
+=======
+        <div class="sk-card__desc">Building automated pipelines from GitHub commit to live deployment. No manual steps, no surprises.</div>
+        <div class="sk-tags">
+          <span class="sk-tag sk-tag--purple">Jenkins</span>
+          <span class="sk-tag sk-tag--purple">Git</span>
+          <span class="sk-tag sk-tag--purple">GitHub</span>
+          <span class="sk-tag sk-tag--purple">Webhooks</span>
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
           <span class="sk-tag sk-tag--purple">Maven</span>
         </div>
       </div>
@@ -1738,6 +2301,7 @@ ul  { list-style: none; }
         <div class="sk-card__idx">[ 03 ]</div>
         <span class="sk-card__ico">🐳</span>
         <div class="sk-card__name">CONTAINERS</div>
+<<<<<<< HEAD
         <div class="sk-card__desc">Containerising apps for consistency across every environment. Dev = Prod.</div>
         <div class="sk-tags">
           <span class="sk-tag sk-tag--pink">Docker</span>
@@ -1753,10 +2317,31 @@ ul  { list-style: none; }
         <div class="sk-tags">
           <span class="sk-tag sk-tag--amber">Terraform</span>
           <span class="sk-tag sk-tag--amber">Ansible</span>
+=======
+        <div class="sk-card__desc">Containerising apps with Docker and serving them through Nginx. Consistent environments every time.</div>
+        <div class="sk-tags">
+          <span class="sk-tag sk-tag--pink">Docker</span>
+          <span class="sk-tag sk-tag--pink">Dockerfile</span>
+          <span class="sk-tag sk-tag--pink">Nginx</span>
+          <span class="sk-tag sk-tag--pink">Reverse Proxy</span>
+        </div>
+      </div>
+      <div class="sk-card sk-card--4">
+        <div class="sk-card__idx">[ 04 ]</div>
+        <span class="sk-card__ico">💻</span>
+        <div class="sk-card__name">LINUX // SCRIPTING</div>
+        <div class="sk-card__desc">Daily Linux user — comfortable with the terminal, file systems, permissions, processes and automation scripts.</div>
+        <div class="sk-tags">
+          <span class="sk-tag sk-tag--amber">Linux</span>
+          <span class="sk-tag sk-tag--amber">Bash</span>
+          <span class="sk-tag sk-tag--amber">Shell Scripting</span>
+          <span class="sk-tag sk-tag--amber">Cron Jobs</span>
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
         </div>
       </div>
       <div class="sk-card sk-card--5">
         <div class="sk-card__idx">[ 05 ]</div>
+<<<<<<< HEAD
         <span class="sk-card__ico">💻</span>
         <div class="sk-card__name">SCRIPTING // LINUX</div>
         <div class="sk-card__desc">Automating everything automatable. Shell scripts that make ops life better.</div>
@@ -1765,16 +2350,35 @@ ul  { list-style: none; }
           <span class="sk-tag sk-tag--blue">Shell</span>
           <span class="sk-tag sk-tag--blue">Linux</span>
           <span class="sk-tag sk-tag--blue">SQL</span>
+=======
+        <span class="sk-card__ico">🗄️</span>
+        <div class="sk-card__name">DATABASE // SQL</div>
+        <div class="sk-card__desc">Designing and querying relational databases. Built real apps with MySQL and XAMPP locally.</div>
+        <div class="sk-tags">
+          <span class="sk-tag sk-tag--blue">MySQL</span>
+          <span class="sk-tag sk-tag--blue">SQL</span>
+          <span class="sk-tag sk-tag--blue">XAMPP</span>
+          <span class="sk-tag sk-tag--blue">phpMyAdmin</span>
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
         </div>
       </div>
       <div class="sk-card sk-card--6">
         <div class="sk-card__idx">[ 06 ]</div>
         <span class="sk-card__ico">🌐</span>
         <div class="sk-card__name">WEB STACK</div>
+<<<<<<< HEAD
         <div class="sk-card__desc">Building and deploying web applications with core web technologies.</div>
         <div class="sk-tags">
           <span class="sk-tag sk-tag--lime">PHP</span>
           <span class="sk-tag sk-tag--lime">HTML/CSS</span>
+=======
+        <div class="sk-card__desc">Built real-world web apps from scratch — frontend to backend to database — using the core web stack.</div>
+        <div class="sk-tags">
+          <span class="sk-tag sk-tag--lime">PHP</span>
+          <span class="sk-tag sk-tag--lime">HTML</span>
+          <span class="sk-tag sk-tag--lime">CSS</span>
+          <span class="sk-tag sk-tag--lime">JavaScript</span>
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
           <span class="sk-tag sk-tag--lime">MySQL</span>
         </div>
       </div>
@@ -1810,16 +2414,27 @@ ul  { list-style: none; }
       <h2 class="section__h2">PRO<span class="g-pink">JECTS</span></h2>
     </div>
     <div class="proj__grid stagger">
+<<<<<<< HEAD
+=======
+
+      <!-- 01 -->
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
       <div class="proj-card proj-card--1">
         <div class="proj-card__corner"></div>
         <div class="proj-card__num">01</div>
         <div class="proj-card__badge">🔄 FULL_DEVOPS</div>
+<<<<<<< HEAD
         <h3 class="proj-card__title">AUTOMATED DEVOPS PIPELINE USING JENKINS, DOCKER &amp; AWS</h3>
         <p class="proj-card__desc">Deployed a web application using Nginx integrated with GitHub, Jenkins CI/CD, and Docker. Configured a complete Jenkins pipeline with build, test, and deployment stages to automate end-to-end application delivery on AWS infrastructure.</p>
+=======
+        <h3 class="proj-card__title">AUTOMATED DEVOPS PIPELINE — JENKINS, DOCKER &amp; AWS</h3>
+        <p class="proj-card__desc">Built a complete end-to-end CI/CD pipeline. A GitHub webhook triggers Jenkins automatically on every commit → Jenkins builds a Docker image of the app → container is deployed and served via Nginx on AWS EC2. Used a demo HTML/CSS portfolio site as the deployed application. Zero manual deployment steps.</p>
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
         <div class="proj-card__tags">
           <span class="proj-card__tag sk-tag--cyan">Jenkins</span>
           <span class="proj-card__tag sk-tag--cyan">Docker</span>
           <span class="proj-card__tag sk-tag--cyan">AWS EC2</span>
+<<<<<<< HEAD
           <span class="proj-card__tag sk-tag--cyan">GitHub</span>
           <span class="proj-card__tag sk-tag--cyan">Nginx</span>
           <span class="proj-card__tag sk-tag--cyan">CI/CD</span>
@@ -1841,6 +2456,87 @@ ul  { list-style: none; }
         </div>
         <a href="#" class="proj-card__arrow" aria-label="View AWS S3 Static Hosting project — coming soon">VIEW_PROJECT &nbsp;→</a>
       </div>
+=======
+          <span class="proj-card__tag sk-tag--cyan">GitHub Webhooks</span>
+          <span class="proj-card__tag sk-tag--cyan">Nginx</span>
+          <span class="proj-card__tag sk-tag--cyan">Linux</span>
+          <span class="proj-card__tag sk-tag--cyan">Bash</span>
+          <span class="proj-card__tag sk-tag--cyan">HTML/CSS</span>
+        </div>
+      </div>
+
+      <!-- 02 -->
+      <div class="proj-card proj-card--2">
+        <div class="proj-card__corner"></div>
+        <div class="proj-card__num">02</div>
+        <div class="proj-card__badge">☁️ CLOUD_INFRA</div>
+        <h3 class="proj-card__title">CLOUD STATIC WEBSITE DEPLOYMENT — AWS S3 &amp; EC2</h3>
+        <p class="proj-card__desc">Provisioned AWS infrastructure to host a static website. Configured S3 bucket with public access policies, set up EC2 with IAM roles and security groups, and enabled CloudWatch monitoring. Practised full AWS cloud provisioning workflow end to end.</p>
+        <div class="proj-card__tags">
+          <span class="proj-card__tag sk-tag--purple">AWS S3</span>
+          <span class="proj-card__tag sk-tag--purple">AWS EC2</span>
+          <span class="proj-card__tag sk-tag--purple">IAM</span>
+          <span class="proj-card__tag sk-tag--purple">VPC</span>
+          <span class="proj-card__tag sk-tag--purple">CloudWatch</span>
+          <span class="proj-card__tag sk-tag--purple">HTML/CSS</span>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div class="proj-card proj-card--1">
+        <div class="proj-card__corner"></div>
+        <div class="proj-card__num">03</div>
+        <div class="proj-card__badge">📚 WEB_APP</div>
+        <h3 class="proj-card__title">INTRA-COLLEGE eBOOK PLATFORM</h3>
+        <p class="proj-card__desc">Built a full-stack internal eBook portal for college students — independently, from scratch. PHP handles user sessions and book management, MySQL stores all records, HTML/CSS/JS powers the frontend. Deployed locally using XAMPP. Solved a real campus need.</p>
+        <div class="proj-card__tags">
+          <span class="proj-card__tag sk-tag--cyan">PHP</span>
+          <span class="proj-card__tag sk-tag--cyan">MySQL</span>
+          <span class="proj-card__tag sk-tag--cyan">HTML/CSS</span>
+          <span class="proj-card__tag sk-tag--cyan">JavaScript</span>
+          <span class="proj-card__tag sk-tag--cyan">XAMPP</span>
+        </div>
+      </div>
+
+      <!-- 04 -->
+      <div class="proj-card proj-card--2">
+        <div class="proj-card__corner"></div>
+        <div class="proj-card__num">04</div>
+        <div class="proj-card__badge">🧾 WEB_APP</div>
+        <h3 class="proj-card__title">CONSTRUCTION BILLING &amp; MANAGEMENT WEBSITE</h3>
+        <p class="proj-card__desc">A full-stack web application built for a private construction business. Features client records management, material tracking, invoice generation, and payment status tracking — all built independently using PHP, MySQL and XAMPP. A real business problem solved with a real working website.</p>
+        <div class="proj-card__tags">
+          <span class="proj-card__tag sk-tag--purple">PHP</span>
+          <span class="proj-card__tag sk-tag--purple">MySQL</span>
+          <span class="proj-card__tag sk-tag--purple">HTML/CSS</span>
+          <span class="proj-card__tag sk-tag--purple">JavaScript</span>
+          <span class="proj-card__tag sk-tag--purple">XAMPP</span>
+        </div>
+      </div>
+
+      <!-- 05 — PORTFOLIO (full width) -->
+      <div class="proj-card proj-card--1" style="grid-column:1/-1">
+        <div class="proj-card__corner"></div>
+        <div class="proj-card__num">05</div>
+        <div class="proj-card__badge" style="color:var(--lime);border-color:var(--lime);background:rgba(200,241,53,.07)">🌐 LIVE_SITE</div>
+        <h3 class="proj-card__title">THIS PORTFOLIO — NEON CYBER DEVOPS PORTFOLIO WEBSITE</h3>
+        <p class="proj-card__desc">A fully responsive neon cyber themed portfolio website — dark/light mode, custom animated cursor, scroll reveal animations, EmailJS contact form, mobile drawer nav, and Lighthouse performance optimisations. Designed with direction and ideas by me, built with the assistance of AI (Claude). Pushed to GitHub and deployed live on Vercel.</p>
+        <div class="proj-card__tags">
+          <span class="proj-card__tag sk-tag--cyan">HTML/CSS</span>
+          <span class="proj-card__tag sk-tag--cyan">JavaScript</span>
+          <span class="proj-card__tag sk-tag--cyan">EmailJS</span>
+          <span class="proj-card__tag sk-tag--cyan">Git</span>
+          <span class="proj-card__tag sk-tag--cyan">GitHub</span>
+          <span class="proj-card__tag sk-tag--cyan">Vercel</span>
+          <span class="proj-card__tag sk-tag--cyan">Responsive Design</span>
+          <span class="proj-card__tag sk-tag--cyan">Performance Optimised</span>
+        </div>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.25rem;align-items:center">
+          <a href="https://github.com/dhanush-666/portfolio-dhanush" target="_blank" rel="noopener noreferrer" class="proj-card__arrow">VIEW_SOURCE &nbsp;→</a>
+        </div>
+      </div>
+
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
     </div>
   </div>
 </section>
@@ -1861,13 +2557,22 @@ ul  { list-style: none; }
       <div class="edu-item edu-item--1">
         <div class="edu-item__left">
           <div class="edu-item__yr">2024 — PRESENT</div>
+<<<<<<< HEAD
           <div class="edu-item__role">DEVOPS WITH AWS</div>
           <div class="edu-item__org">JSpiders, Bangalore</div>
+=======
+          <div class="edu-item__role">DEVOPS WITH AWS STUDENT</div>
+          <div class="edu-item__org">6-Month Course · Bangalore</div>
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
         </div>
         <ul class="edu-item__pts">
           <li>Completed DevOps with AWS course covering Jenkins, Docker, Kubernetes, Terraform and CI/CD pipelines.</li>
           <li>Built and deployed real-world projects including automated pipelines and cloud infrastructure on AWS.</li>
+<<<<<<< HEAD
           <li>Earned DevOps with AWS certification from JSpiders training program.</li>
+=======
+          <li>Earned DevOps with AWS certification upon course completion.</li>
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
         </ul>
       </div>
       <div class="edu-item edu-item--2">
@@ -1918,7 +2623,11 @@ ul  { list-style: none; }
         <div class="cert-card__glow"></div>
         <span class="cert-card__ico">☁️</span>
         <div class="cert-card__name">DevOps with AWS Certification</div>
+<<<<<<< HEAD
         <div class="cert-card__org">JSpiders, Bangalore</div>
+=======
+        <div class="cert-card__org">DevOps with AWS · 6-Month Course</div>
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
       </div>
     </div>
   </div>
@@ -1972,10 +2681,13 @@ ul  { list-style: none; }
           <span class="ct-link__ico" aria-hidden="true">💼</span>
           <div><div class="ct-link__name">LINKEDIN</div><div class="ct-link__val">linkedin.com/in/dhanush-s-033073359</div></div>
         </a>
+<<<<<<< HEAD
         <a href="tel:+918946061113" class="ct-link ct-link--3" aria-label="Call Dhanush at +91 8946061113">
           <span class="ct-link__ico" aria-hidden="true">📞</span>
           <div><div class="ct-link__name">PHONE</div><div class="ct-link__val">+91-8946061113</div></div>
         </a>
+=======
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
         <a href="https://github.com/dhanush-666" target="_blank" rel="noopener noreferrer" class="ct-link ct-link--4" aria-label="Visit Dhanush's GitHub profile (opens in new tab)">
           <span class="ct-link__ico" aria-hidden="true">🐙</span>
           <div><div class="ct-link__name">GITHUB</div><div class="ct-link__val">github.com/dhanush-666</div></div>
@@ -1992,7 +2704,11 @@ ul  { list-style: none; }
 
 <!-- FOOTER -->
 <footer class="footer">
+<<<<<<< HEAD
   <p>© 2026 <span>DHANUSH_S</span> // aspiring_devops_engineer</p>
+=======
+  <p>© 2026 <span>DHANUSH_S</span> // devops_engineer</p>
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
   <p><span>ERODE, TAMIL NADU</span> :: built_with_passion 🚀</p>
 </footer>
 
@@ -2000,25 +2716,46 @@ ul  { list-style: none; }
 <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
 
 <script>
+<<<<<<< HEAD
 /* ── LOADER ── */
+=======
+/* ── LOADER — faster on mobile to reduce TBT ── */
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
 const stages = ['booting_system...','loading_modules...','connecting_cloud...','deploying_portfolio...','launch!'];
 let si = 0, prog = 0;
 const lbar = document.getElementById('lbar');
 const lpct = document.getElementById('lpct');
 const lsub = document.getElementById('ld-sub');
 
+<<<<<<< HEAD
 const lt = setInterval(() => {
   prog += Math.random() * 12 + 4;
   if (prog >= 100) {
     prog = 100;
     clearInterval(lt);
     setTimeout(() => document.getElementById('loader').classList.add('out'), 600);
+=======
+/* On mobile use faster interval to get out of the way quicker */
+const loaderSpeed = window.innerWidth < 768 ? 30 : 60;
+const loaderStep  = window.innerWidth < 768 ? 18 : 12;
+
+const lt = setInterval(() => {
+  prog += Math.random() * loaderStep + 4;
+  if (prog >= 100) {
+    prog = 100;
+    clearInterval(lt);
+    setTimeout(() => document.getElementById('loader').classList.add('out'), 300);
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
   }
   lbar.style.width = prog + '%';
   lpct.textContent = Math.floor(prog) + '%';
   const ni = Math.floor((prog / 100) * stages.length);
   if (ni !== si && ni < stages.length) { si = ni; lsub.textContent = stages[si]; }
+<<<<<<< HEAD
 }, 60);
+=======
+}, loaderSpeed);
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
 
 /* ── CUSTOM CURSOR (desktop only) ── */
 const dot  = document.getElementById('cur');
@@ -2261,9 +2998,44 @@ scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+<<<<<<< HEAD
 /* ── EMAILJS CONTACT FORM ── */
 // STEP 1: Replace YOUR_PUBLIC_KEY with your EmailJS public key
 emailjs.init('JeQgg6BNyAPyGNX3j');
+=======
+/* ── THEME TOGGLE (dark ↔ light) ── */
+const themeToggle = document.getElementById('themeToggle');
+const themeKnob   = document.getElementById('themeKnob');
+const htmlEl      = document.documentElement;
+
+function applyTheme(theme) {
+  if (theme === 'light') {
+    htmlEl.setAttribute('data-theme', 'light');
+    themeKnob.textContent = '☀️';
+    // Update cursor ring colour for light mode
+    if (ring) ring.style.borderColor = 'rgba(3,105,161,.5)';
+  } else {
+    htmlEl.removeAttribute('data-theme');
+    themeKnob.textContent = '🌙';
+    if (ring) ring.style.borderColor = 'rgba(0,255,229,.5)';
+  }
+  localStorage.setItem('theme', theme);
+}
+
+// Load saved preference
+applyTheme(localStorage.getItem('theme') || 'dark');
+
+themeToggle.addEventListener('click', () => {
+  const isLight = htmlEl.getAttribute('data-theme') === 'light';
+  applyTheme(isLight ? 'dark' : 'light');
+});
+
+/* ── EMAILJS — init safely (script is deferred, may load after DOMContentLoaded) ── */
+function initEmailJS() {
+  if (typeof emailjs === 'undefined') return; // not loaded yet, will retry
+  // ⚠️ SECURITY: Go to emailjs.com → Account → Security → add dhanush-666.github.io as allowed domain
+  emailjs.init('JeQgg6BNyAPyGNX3j');
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
 
 // Enter key navigation between fields
 const cfName  = document.getElementById('cf-name');
@@ -2340,6 +3112,23 @@ cfSubmit.addEventListener('click', () => {
     console.error('EmailJS error:', err);
   });
 });
+<<<<<<< HEAD
+=======
+} // end initEmailJS
+
+// Call now if EmailJS already loaded, else wait for it
+if (typeof emailjs !== 'undefined') {
+  initEmailJS();
+} else {
+  // Deferred script — poll until ready (max 5s)
+  let attempts = 0;
+  const ejsPoll = setInterval(() => {
+    attempts++;
+    if (typeof emailjs !== 'undefined') { clearInterval(ejsPoll); initEmailJS(); }
+    else if (attempts > 50) clearInterval(ejsPoll); // give up after 5s
+  }, 100);
+}
+>>>>>>> c267416 (uploaded new version of portfolio and resume)
 </script>
 </body>
 </html>
